@@ -1,0 +1,28 @@
+
+h1{
+  color: orange;
+  font-family: verdana;
+  font-size: 300%;
+}
+    ul{
+      list-style-type: none;;
+      overflow: hidden;
+      background-color: black;
+    }
+    /* The list in the Navigation bar floats side to side */
+    ul.topnav li {float: left;
+                  border-right: 1px solid #bbb;
+                 }
+
+    ul.topnav li a{
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      transition: 0.7s;
+      font-size: 18px;
+      font-family: verdana;
+    }
+    li a:hover{
+      background-color: orange;
+    }
