@@ -5,24 +5,56 @@
     <title>Student Council Meetings</title>
     <script src="vue.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="app">
-      <img src="http://www.set-test.org/assets/SSLAl.jpg" alt="SSLA Icon" style="width:200px;height:100px;">
-      <h1 align="center">SC Meet Records</h1>
 
+      <h1 align="center"><img src="" alt="SSLA Icon" style="width:200px;height:100px;"
+          align="center">
+        SC Meet Records
+
+      </h1>
 
       <ul class="topnav" id="myTopNav">
-        <li><a href="#CoreCommiteeMeeting">Core Commitee Meeting </a></li>
-        <li><a href="#AssemblyMeeting">Assembly Meeting </a></li>
-        <li><a href="#FacultyMeeting">Faculty Meeting </a></li>
-        <li> <a href="#MeetingWithDirector">Director Meeting </a></li>
-        <li><a href="#Feedback">Feedback </a></li>
-        </li>
+
+          <li class="Core Committee Meeting">
+            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Core Committee Meeting</a>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#TheDates">The Dates</a>
+                <a href="#Attendance">Attendance</a>
+              </div>
+            </li>
+
+            <li><a href="#AssemblyMeeting">Assembly Meeting </a></li>
+            <li><a href="#FacultyMeeting">Faculty Meeting </a></li>
+            <li><a href="#MeetingWithDirector">Director Meeting </a></li>
+            <li><a href="#Feedback">Feedback </a></li>
+
       </ul>
 
-      <img src="file:///C:/Users/Admin/Desktop/Symbian/Computer%20Studies%20(Minor)/Paper%207/Lesson%205/SC.jpg" style="width:1200px;height:700px;" align="center;"/>
+      <img src="file:///C:/Users/Admin/Desktop/Symbian/Computer%20Studies%20(Minor)/Paper%207/Lesson%205/SC.jpg"
+            style="width:800px;height:500px;" align="left"/>
 
+            <ul class="sidenav" id="mySidenav">
+              <li> <a class="active" href="#designations">Designation</a></li>
+              <li> <a href="#president">President</a></li>
+              <li class="icon">
+                <a href="javascript:void(0);" style="font-size:20px;"
+            onclick="myFunction()">☰</a>
+          </li>
+        </ul>
+
+    <div id="myDIV" class="header" text-align="bottom">
+      <h2 style="margin:5px">Topics To Discuss</h2>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span onclick="newElement()" class="addBtn">Insert</span>
+    </div>
+
+    <ul id="myUL">
+      <li>The Food Plate Ban</li>
+      <li>The Upcoming Fests</li>
+    </ul>
 
 </script>
 </body>
