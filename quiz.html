@@ -16,7 +16,7 @@
 
       </h1>
 
-      <ul class="topnav" id="myTopNav">
+      <ul>
 
           <li class="Core Committee Meeting">
             <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Core Committee Meeting</a>
@@ -25,24 +25,7 @@
                 <a href="#Attendance">Attendance</a>
               </div>
             </li>
-            <script>
-            function myFunction() {
-              var x=
-              document.getElementById("myDropdown").classlist.toggle("show");
-            }
-            window.onclick=function(e) {
-              if (!e.target.matches('.dropbtn')){
-
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var d = 0; d < dropdowns.length;d++){
-                  var openDropDown = dropdowns[d];
-                  if(openDropDown.classlist.contains('show')) {
-                    openDropDown.classlist.remove('show');
-                  }
-                }
-              }
-            }
-              </script>
+            
 
             <li><a href="#AssemblyMeeting">Assembly Meeting </a></li>
             <li><a href="#FacultyMeeting">Faculty Meeting </a></li>
@@ -63,7 +46,7 @@
       </li>
     </ul>
 
-    <span> <h3> Discussion will be: {{ Discuss }} </span></h3>
+    <span> <h3> Topics that will be discussed: {{ Discuss }} </span></h3>
     <br>
     <input type="text" v-model="Discuss" placeholder="Write in me">
     <button @click="addDiscussion()" type='button'> Add the Topic </button>
@@ -71,31 +54,25 @@
 
 </div>
 
-<script src="vue.js"></script>
-  <script>
-    new Vue({
-      el: "#app",
-      data: {
-        EventsDiscussion: [
-              "Food Plate Ban",
-              "Cultural Meet",
-            ],
-            Discuss:""
-          },
-          methods: {
-            addDiscussion: function(){
-              this.EventsDiscussion.push(this.Discuss);
-              this.Discuss="";
-            },
-          removeDiscussion: function(){
 
-            this.EventsDiscussion.pop(this.Discuss);
-          }
-        }
-     })
-     </script>
 
-     <div id="app";
+
+     <div id="app">
+       <h3 align = "center"> People Attending: {{ attend }} </h3>
+       <button @click="Increase()"
+        v-if="attend < 13">
+        Attending!
+      </button>
+      <p v-else> You cannot click more than 13 </p>
+
+      <button @click="Decrease()"
+       v-if="attend > 0">
+      Not Attending!
+    </button>
+
+    <p v-else> You can't click less than 0 </p>
+    </div>
+
 
 
      <ul class="sidenav" id="mySidenav">
@@ -106,6 +83,8 @@
      onclick="myFunction()">☰</a>
    </li>
    </ul>
+
+
 
 </script>
 </body>

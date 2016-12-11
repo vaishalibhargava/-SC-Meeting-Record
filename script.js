@@ -13,12 +13,28 @@ window.onclick=function(e) {
       }
     }
 
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick=function(e) {
+      if (!e.target.matches('.dropbtn')){
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++){
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+      </script>
+
     new Vue({
       el: "#app",
       data: {
         EventsDiscussion: [
-                  "Food Plate Ban",
-                  "Cultural Meet",
+
                 ],
                 Discuss:""
               },
@@ -33,3 +49,18 @@ window.onclick=function(e) {
               }
             }
          })
+
+         new Vue({
+           el:'#app',
+           data: {
+             attend: 0
+           },
+           methods: {
+             Increase: function(){
+               this.attend +=1;
+             },
+             Decrease: function(){
+               this.attend -=1;
+             }
+           }
+         });

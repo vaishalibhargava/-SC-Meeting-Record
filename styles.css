@@ -1,6 +1,6 @@
 
 body{
-  background-image:url(file:///C:/Users/Admin/Documents/GitHub/-SC-Meeting-Record/Bg.jpg);
+  background-image:url(file:///C:/Users/Admin/Documents/GitHub/-SC-Meeting-Record/bag.jpg);
 }
 h1{
   color: #1F618D;
@@ -9,10 +9,31 @@ h1{
 }
 
 h3{
-  color:#922B21;
+  color:#4A235A;
   font-family: times;
   font-size: 200%;
 }
+
+h2{
+  color: #4A235A;
+  font-family: times;
+  font-size: 200%;
+}
+
+p{
+  color: #1F618D;
+  font-family: times;
+  font-size: 150%;
+}
+
+button{
+  box-sizing: border-box;
+  color: #0B5345;
+  width: 150px;
+  height: 50px;
+  align-items: center;
+}
+
     ul{
       list-style-type: none;;
       overflow: hidden;
@@ -132,7 +153,7 @@ user-select: none;
 
 input{
   border: none;
-  width: 10%;
+  width: 15%;
   color: inherit;
   float: left;
   text-align: center;
