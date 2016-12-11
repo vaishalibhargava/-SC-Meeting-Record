@@ -1,11 +1,17 @@
 
 body{
-  background-image:url();
+  background-image:url(file:///C:/Users/Admin/Documents/GitHub/-SC-Meeting-Record/Bg.jpg);
 }
 h1{
-  color: teal;
+  color: #1F618D;
   font-family:times;
   font-size: 300%;
+}
+
+h3{
+  color:#922B21;
+  font-family: times;
+  font-size: 200%;
 }
     ul{
       list-style-type: none;;
@@ -14,7 +20,7 @@ h1{
     }
     /* The list in the Navigation bar floats side to side */
     ul.topnav li {float: left;
-                  border-right: 1px solid #bbb;
+                  border-right: 1px solid white;
                  }
 
     ul.topnav li a{
@@ -34,15 +40,15 @@ h1{
 
     ul.sidenav{
       overflow: hidden;
-      background-color: white;
+      background-color: black;
     }
 
 
     ul.sidenav li a {
       display: inline-block;
-      color: black;
+      color: white;
       text-align: center;
-      padding: 14px 16px;
+      padding: inherit;;
       transition: 0.4s;
       font-size: 20px;
     }
@@ -50,7 +56,7 @@ h1{
     ul.sidenav li a:hover {background-color: orange;}
 
     ul.sidenav li {float: right;
-                  border-right: 1px solid black;
+                  border-right: 1px solid white;
                  }
 
     ul.sidenav li.icon {display: list-item;}
@@ -61,7 +67,7 @@ h1{
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333;
+      color: white;
     }
 
     li{
@@ -93,14 +99,14 @@ h1{
 }
 
 .dropdown-content a{
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: white}
+.dropdown-content a:hover {background-color: black}
 
 .dropdown:hover .dropdown-content{
   display:block;
@@ -108,28 +114,15 @@ h1{
 
 .show {display:block;}
 
-/* Creating a To-Do List for the Council to add Events to discuss for.*/
-
-body{
-  margin: 0;
-  min-width: 200px;
-}
-
-{
-  box-sizing: border-box;
-}
-
-ul{
-  margin: 0;       /*Margins and Padding off the list */
-  padding: 0;
-}
+/*Creating a To-Do List for the Council to add Events to discuss for. */
 
 ul li{               /*styling list items*/
-  cursor: grab;
+  cursor: pointer;;
   position: relative;padding: 10px 8px 10px 30px;
-  background: #eee;
+  background: black;
   font-size: 20px;
   transition: 0.3s;
+
 
 -webkit-user-select: none;       /*list items are now unselectable*/
 -moz-user-select:none;
@@ -137,70 +130,13 @@ ul li{               /*styling list items*/
 user-select: none;
 }
 
-un li: nth-child(odd) {          /*odd items are different colour*/
-  background: lightblue;
-}
-
-un li:hover{
-  background: orange;
-}
-
-un li.checked{                  /*When the text is clicked, background colour will be added and text will be striked out */
-  background: teal;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-un li.checked::before{           /*Adds a check mark when clicked*/
-  content:'';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: thin;
-  top: 10px;
-  left: 15px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-.close {
-  position: absolute;
-  right:0;
-  top:0;
-  padding: 12px 16px 12px 16px
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-.header {
-  background-color: orange;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-.header:after{
-  content"";
-  display: table;
-  clear: both;
-}
-
 input{
   border: none;
-  width: 30%;
-  background: lightgrey;
+  width: 10%;
   color: inherit;
   float: left;
   text-align: center;
   font-size: 16px;
-  cursor: pointer;
+  cursor: pointer;;
   transition: 0.2s;
-}
-
-.addBtn:hover{
-  background-color: #bbb;
 }
