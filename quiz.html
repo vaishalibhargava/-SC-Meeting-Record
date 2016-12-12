@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Student Council Meetings</title>
-    <script src="vue.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="C:\Users\Admin\Documents\GitHub\-SC-Meeting-Record\script.js"></script>
+
   </head>
   <body>
+    <script src="vue.js"></script>
     <div id="app">
+
+      <!--Click the Login button to go to the Login Form -->
+      
+      <h5> <a href="#TopBookMark"> Login </h5> </a>
+
+      <!-- This is for the icon and heading on the top. -->
 
       <h1 align="center"><img src="file:///C:/Users/Admin/Documents/GitHub/-SC-Meeting-Record/SSLAIcon.jpg" alt="SSLA Icon" style="width:300px;height:200px;"
           align="center">
@@ -16,17 +22,11 @@
 
       </h1>
 
+      <!-- This is to make the Home Bar-->
+
       <ul>
 
-          <li class="Core Committee Meeting">
-            <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Core Committee Meeting</a>
-              <div class="dropdown-content" id="myDropdown">
-                <a href="#TheDates">The Dates</a>
-                <a href="#Attendance">Attendance</a>
-              </div>
-            </li>
-            
-
+          <li><a class="active" href="#Core Committee Meeting"> Core Committee Meeting </a></li>
             <li><a href="#AssemblyMeeting">Assembly Meeting </a></li>
             <li><a href="#FacultyMeeting">Faculty Meeting </a></li>
             <li><a href="#MeetingWithDirector">Director Meeting </a></li>
@@ -34,11 +34,16 @@
 
       </ul>
 
+      <!-- This is for adding the SC picture -->
+
       <img src="file:///C:/Users/Admin/Desktop/Symbian/Computer%20Studies%20(Minor)/Paper%207/Lesson%205/SC.jpg"
             style="width:800px;height:500px;" align="left"/>
 
 
-  <div id="app">
+
+  <!-- This is for adding in topics that would be discussed per meeting. -->
+
+
     <h1 align="center">Events Discussion</h1>
     <ul>
       <li v-for="Discuss in EventsDiscussion">
@@ -52,40 +57,105 @@
     <button @click="addDiscussion()" type='button'> Add the Topic </button>
     <button @click="removeDiscussion()" type='button'> Remove the Topic </button>
 
-</div>
 
+<!-- This is for counting the number of people that will attend -->
 
-
-
-     <div id="app">
        <h3 align = "center"> People Attending: {{ attend }} </h3>
        <button @click="Increase()"
-        v-if="attend < 13">
-        Attending!
+          v-if="attend < 13">
+          Attending!
       </button>
       <p v-else> You cannot click more than 13 </p>
 
       <button @click="Decrease()"
-       v-if="attend > 0">
-      Not Attending!
-    </button>
-
-    <p v-else> You can't click less than 0 </p>
-    </div>
+          v-if="attend > 0">
+          Not Attending!
+      </button>
+      <p v-else> You cannot click less than 0 </p>
 
 
+<!-- This is for creating checkbox for the designations that are attending -->
 
-     <ul class="sidenav" id="mySidenav">
-       <li> <a class="active" href="#designations">Designation</a></li>
-       <li> <a href="#president">President</a></li>
-       <li class="icon">
-         <a href="javascript:void(0);" style="font-size:20px;"
-     onclick="myFunction()">☰</a>
-   </li>
-   </ul>
+  <h4> Please click on the button 'Attending' if you are and check the box below which related to your designation in the Student Council.
+    If you are not click on 'Not Attending' and leave the check boxes unchecked. </h4>
+
+  <input type="checkbox" id="president" value="President" v-model="checkedNames">
+  <label for="president"> President </label><br>
+  <input type="checkbox" id="secretary" value="Secretary" v-model="checkedNames">
+  <label for="secretary"> Secretary </label><br>
+  <input type="checkbox" id="culturalofficer" value="Cultural Officer" v-model="checkedNames">
+  <label for="culturalofficer"> Cultural Officer </label><br>
+  <input type="checkbox" id="communicationofficer" value="Communication Officer" v-model="checkedNames">
+  <label for="communicationofficer"> Communication Officer </label><br>
+  <input type="checkbox" id="campusofficer" value="Campus Officer" v-model="checkedNames">
+  <label for="campusofficer"> Campus Officer </label><br>
+  <input type="checkbox" id="eventcoordinator" value="Event Coordinator" v-model="checkedNames">
+  <label for="eventcoordinator"> Events Coordinator </label><br>
+  <input type="checkbox" id="sportscoordinator" value="Sports Coordinator" v-model="checkedNames">
+  <label for="sportscoordinator"> Sports Coordinator </label><br>
+  <input type="checkbox" id="grievanceofficer" value="Grievence Officer" v-model="checkedNames">
+  <label for="grievanceofficer"> Grievance Officer </label><br>
+  <input type="checkbox" id="batchrep2020" value="Batch Rep 2020" v-model="checkedNames">
+  <label for="batchrep2020"> Batch Rep 2020 </label><br>
+  <input type="checkbox" id="batchrep2019" value="Batch Rep 2019" v-model="checkedNames">
+  <label for="batchrep2019"> Batch Rep 2019 </label><br>
+  <input type="checkbox" id="batchrep2018" value="Batch Rep 2018" v-model="checkedNames">
+  <label for="batchrep2018"> Batch Rep 2018 </label><br>
+  <input type="checkbox" id="batchrep2017" value="Batch Rep 2017" v-model="checkedNames">
+  <label for="batchrep2017"> Batch Rep 2017 </label><br>
+
+  <br><br>
+  <span> Checked names: {{ checkedNames }} </span>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Click on Login button -->
+
+  <a name="TopBookMark"></a>
+
+  <!-- This is for creating a form for Login.  -->
 
 
+  <form action="file:///C:/Users/Admin/Desktop/Symbian/Computer%20Studies%20(Minor)/Paper%207/Lesson%205/quiz.html" method="post">
+<fieldset class="account-info">
+  <label>
+    Username
+    <input type="text" name="username">
+  </label>
+  <label>
+    Password
+    <input type="password" name="password">
+  </label>
+</fieldset>
+<p>
+  <input class="w3-radio" type="radio" name="gender" value="male" checked>
+  <label class="w3-validate">Male</label></p>
 
-</script>
+  <p>
+    <input class="w3-radio" type="radio" name="gender" value="female">
+    <label class="w3-validate">Female</label></p>
+
+    <p>
+      <input class="w3-radio" type="radio" name="gender" value="" disabled>
+      <label class="w3-validate">Don't know (Disabled)</label></p>
+      <fieldset class="account-action">
+      <input class="btn" type="submit" name="submit" value="Login" >
+
+
+      <label>
+        <input type="checkbox" name="remember"> Stay signed in
+      </label>
+  </fieldset>
+  </form>
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>

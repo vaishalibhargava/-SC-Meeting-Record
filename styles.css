@@ -20,6 +20,18 @@ h2{
   font-size: 200%;
 }
 
+h4{
+  color:purple;
+  font-family: times;
+  font-size: 100%
+}
+
+h5{
+  float: right;
+  font-size: 200%;
+  color: purple;
+}
+
 p{
   color: #1F618D;
   font-family: times;
@@ -39,7 +51,7 @@ button{
       overflow: hidden;
       background-color: black;
     }
-    /* The list in the Navigation bar floats side to side */
+
     ul.topnav li {float: left;
                   border-right: 1px solid white;
                  }
@@ -57,32 +69,27 @@ button{
       background-color: teal;
     }
 
-    /* The following code is for the Side Navigation Bar */
-
-    ul.sidenav{
-      overflow: hidden;
-      background-color: black;
+    form{
+      float: right;
+      background-color: white;
+      color: black;
     }
 
-
-    ul.sidenav li a {
-      display: inline-block;
-      color: white;
-      text-align: center;
-      padding: inherit;;
-      transition: 0.4s;
+    label{
+      color: darkorange;
       font-size: 20px;
     }
 
-    ul.sidenav li a:hover {background-color: orange;}
+    span{
+      color: purple;
+      font-size: 130%;
+      font-family: times;
+    }
 
-    ul.sidenav li {float: right;
-                  border-right: 1px solid white;
-                 }
 
-    ul.sidenav li.icon {display: list-item;}
 
-    /* The following code is for the drop down list of Core Committee*/
+
+
     ul {
       list-style-type: none;
       margin: 0;
@@ -95,7 +102,7 @@ button{
       float: left;
     }
 
-    li a, .dropbtn{
+    li a {
       display: inline-block;
       color: white;
       text-align: center;
@@ -103,37 +110,14 @@ button{
       text-decoration: none;
     }
 
-    li a:hover, .dropbtn:hover .dropbtn{
+    li a:hover {
       background-color: teal;
     }
 
-    li.dropdown{
-      display: inline-block;
-    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 150px;
-  box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
-}
 
-.dropdown-content a{
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
 
-.dropdown-content a:hover {background-color: black}
 
-.dropdown:hover .dropdown-content{
-  display:block;
-}
-
-.show {display:block;}
 
 /*Creating a To-Do List for the Council to add Events to discuss for. */
 
@@ -142,22 +126,4 @@ ul li{               /*styling list items*/
   position: relative;padding: 10px 8px 10px 30px;
   background: black;
   font-size: 20px;
-  transition: 0.3s;
-
-
--webkit-user-select: none;       /*list items are now unselectable*/
--moz-user-select:none;
--ms-user-select:none;
-user-select: none;
-}
-
-input{
-  border: none;
-  width: 15%;
-  color: inherit;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;;
-  transition: 0.2s;
-}
+  transition: 0.5s;
