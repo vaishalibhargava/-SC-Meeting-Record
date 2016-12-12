@@ -2,6 +2,9 @@
 body{
   background-image:url(file:///C:/Users/Admin/Documents/GitHub/-SC-Meeting-Record/bag.jpg);
 }
+
+/* Style for the headings */
+
 h1{
   color: #1F618D;
   font-family:times;
@@ -56,6 +59,7 @@ button{
                   border-right: 1px solid white;
                  }
 
+
     ul.topnav li a{
       display: inline-block;
       color: white;
@@ -69,11 +73,15 @@ button{
       background-color: teal;
     }
 
+    /* Styling for the form */
+
     form{
       float: right;
       background-color: white;
       color: black;
     }
+
+
 
     label{
       color: darkorange;
